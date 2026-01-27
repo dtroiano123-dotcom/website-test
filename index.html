@@ -409,7 +409,7 @@
                 .main-content {
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-items: center;
                     gap: 8px;
                 }
                 .hero-row {
@@ -418,23 +418,25 @@
                     justify-content: space-between;
                     gap: 12px;
                     width: 100%;
+                    position: relative;
+                    padding-bottom: 220px;
                 }
                 h1 {
                     font-size: clamp(1.8rem, 7vw, 2.4rem);
                     -webkit-text-stroke: 2px black;
-                    text-align: left;
-                    padding-left: 12px;
+                    text-align: center;
+                    padding-left: 0;
                 }
                 h2 {
                     font-size: clamp(1.6rem, 6.5vw, 2.2rem);
                     -webkit-text-stroke: 2px black;
-                    text-align: left;
-                    padding-left: 12px;
+                    text-align: center;
+                    padding-left: 0;
                 }
                 h3 {
                     font-size: clamp(1.2rem, 5vw, 1.6rem);
-                    text-align: left;
-                    padding-left: 12px;
+                    text-align: center;
+                    padding-left: 0;
                 }
                 .main-content {
                     padding: 20px 16px 80px;
@@ -498,9 +500,11 @@
                     z-index: 3;
                 }
                 .cover-wrap {
-                    position: static;
-                    transform: none;
-                    margin: 0 auto;
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    transform: translateX(-50%);
+                    margin-top: 16px;
                     width: auto;
                     max-width: none;
                 }
