@@ -66,6 +66,9 @@
             .header-bar {
                 width: 100%;
             }
+            .mobile-title {
+                display: none;
+            }
             .hero-row {
                 width: 100%;
             }
@@ -89,7 +92,7 @@
             h2 {
                 color: #b5851f;
             }
-            h2:last-of-type {
+            .flame-line {
                 margin-top: -1em;
             }
         
@@ -458,18 +461,22 @@
                 .header-bar h2 {
                     line-height: 1.05;
                 }
-                .header-bar h2:nth-of-type(2) {
-                    margin-top: 0.2em;
-                }
-                .header-bar h2:nth-of-type(1) {
-                    position: relative;
+                .header-bar h2.mobile-title {
+                    margin-top: 0;
                     display: inline-flex;
+                }
+                .header-bar h2.title-line,
+                .header-bar h2.flame-line {
+                    display: none;
+                }
+                .header-bar h2.mobile-title {
+                    position: relative;
                     align-items: center;
                     justify-content: center;
                     gap: 8px;
                 }
-                .header-bar h2:nth-of-type(1)::before,
-                .header-bar h2:nth-of-type(1)::after {
+                .header-bar h2.mobile-title::before,
+                .header-bar h2.mobile-title::after {
                     content: "";
                     display: inline-block;
                     width: 44px;
@@ -478,14 +485,11 @@
                     background-repeat: no-repeat;
                     background-position: center;
                 }
-                .header-bar h2:nth-of-type(1)::before {
+                .header-bar h2.mobile-title::before {
                     background-image: url("SingleFlameGIFLEFT.gif");
                 }
-                .header-bar h2:nth-of-type(1)::after {
+                .header-bar h2.mobile-title::after {
                     background-image: url("SingleFlameGIFRIGHT.gif");
-                }
-                .header-bar h2:nth-of-type(2) img {
-                    display: none;
                 }
                 h3 {
                     font-size: clamp(1.2rem, 5vw, 1.6rem);
@@ -678,8 +682,9 @@
             <div class="main-content">
             <div class="header-bar">
                 <h1 class="fix-stroke">OUT NOW:</h1>
-                <h2 class="fix-stroke">Fade, My Dying</h2>
-                <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
+                <h2 class="fix-stroke title-line">Fade, My Dying</h2>
+                <h2 class="fix-stroke flame-line"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
+                <h2 class="fix-stroke mobile-title">Fade, My Dying Flame</h2>
                 <h3>by</h3>
                 <h3>Daniel T. Troiano</h3>
             </div>
@@ -701,7 +706,7 @@
             </div>
             <div class="bottom-gif"></div>
             <img src="FlameGifCROPPED.gif" alt="Right Flame" class="right-flame-patch">
-            <div class="bottom-text-box">Everything done and created by Daniel Troiano © 2026 Daniel Troiano. All Rights Reserved.</div>
+            <div class="bottom-text-box">Everything created by Daniel Troiano © 2026 Daniel Troiano. All Rights Reserved.</div>
         </div>
         <section id="featured-art" class="featured-art-section page hidden">
             <div class="featured-art-actions">
