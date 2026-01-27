@@ -30,10 +30,10 @@
                 position: relative;
             }
             .left-sidebar img {
-                width: auto;
+                    z-index: 2147483647;
                 height: 600px;
-                display: block;
-            }
+                    font-size: 0.75em;
+                    transform: none;
             .right-sidebar {
                 float: right;
                 margin-right: 200px;
@@ -459,7 +459,7 @@
                     line-height: 1.05;
                 }
                 .header-bar h2:nth-of-type(2) {
-                    margin-top: 0.2em;
+                    margin-top: 0.05em;
                 }
                 .header-bar h2:nth-of-type(1) {
                     position: relative;
@@ -472,8 +472,8 @@
                 .header-bar h2:nth-of-type(1)::after {
                     content: "";
                     display: inline-block;
-                    width: 44px;
-                    height: 44px;
+                    width: 52px;
+                    height: 52px;
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -528,7 +528,8 @@
                     margin: 0;
                     align-self: flex-end;
                     position: relative;
-                    right: -16px;
+                        right: 0;
+                        margin-right: -16px;
                 }
                 .right-sidebar {
                     flex-direction: column;
@@ -554,7 +555,7 @@
                     transform: translate(-50%, -50%);
                     width: 70%;
                     margin: 0;
-                    font-size: 1.25em;
+                    font-size: 1.75em;
                     line-height: 1.6;
                     z-index: 3;
                 }
@@ -701,7 +702,7 @@
             </div>
             <div class="bottom-gif"></div>
             <img src="FlameGifCROPPED.gif" alt="Right Flame" class="right-flame-patch">
-            <div class="bottom-text-box">Everything done and created by Daniel Troiano © 2026 Daniel Troiano. All Rights Reserved.</div>
+            <div class="bottom-text-box">Everything created by Daniel Troiano © 2026 Daniel Troiano. All Rights Reserved.</div>
         </div>
         <section id="featured-art" class="featured-art-section page hidden">
             <div class="featured-art-actions">
