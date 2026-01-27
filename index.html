@@ -63,6 +63,9 @@
                 width: 100%;
                 position: relative;
             }
+            .header-bar {
+                width: 100%;
+            }
             .hero-row {
                 width: 100%;
             }
@@ -402,6 +405,7 @@
             @media (max-width: 768px) {
                 html, body {
                     overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
                 }
                 body {
                     background-attachment: scroll;
@@ -412,6 +416,15 @@
                     align-items: center;
                     gap: 8px;
                 }
+                .header-bar {
+                    position: sticky;
+                    top: 0;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.9);
+                    padding: 10px 12px 12px;
+                    z-index: 20;
+                    text-align: center;
+                }
                 .hero-row {
                     display: flex;
                     align-items: flex-start;
@@ -419,7 +432,7 @@
                     gap: 12px;
                     width: 100%;
                     position: relative;
-                    padding-bottom: 220px;
+                    padding-bottom: 240px;
                 }
                 h1 {
                     font-size: clamp(1.8rem, 7vw, 2.4rem);
@@ -501,10 +514,10 @@
                 }
                 .cover-wrap {
                     position: absolute;
-                    left: 50%;
+                    left: 50vw;
                     top: 100%;
                     transform: translateX(-50%);
-                    margin-top: 16px;
+                    margin-top: 12px;
                     width: auto;
                     max-width: none;
                 }
@@ -617,11 +630,13 @@
     <body>
         <div id="main-page" class="page">
             <div class="main-content">
-            <h1 class="fix-stroke">OUT NOW:</h1>
-            <h2 class="fix-stroke">Fade, My Dying</h2>
-            <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
-            <h3>by</h3>
-            <h3>Daniel T. Troiano</h3>
+            <div class="header-bar">
+                <h1 class="fix-stroke">OUT NOW:</h1>
+                <h2 class="fix-stroke">Fade, My Dying</h2>
+                <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
+                <h3>by</h3>
+                <h3>Daniel T. Troiano</h3>
+            </div>
             <div class="hero-row">
                 <div class="left-sidebar">
                     <img src="Column.png" alt="Column">
