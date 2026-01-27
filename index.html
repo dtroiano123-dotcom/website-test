@@ -453,6 +453,32 @@
                     text-align: center;
                     padding-left: 0;
                 }
+                .header-bar h2:nth-of-type(1) {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                }
+                .header-bar h2:nth-of-type(1)::before,
+                .header-bar h2:nth-of-type(1)::after {
+                    content: "";
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .header-bar h2:nth-of-type(1)::before {
+                    background-image: url("SingleFlameGIFLEFT.gif");
+                }
+                .header-bar h2:nth-of-type(1)::after {
+                    background-image: url("SingleFlameGIFRIGHT.gif");
+                }
+                .header-bar h2:nth-of-type(2) img {
+                    display: none;
+                }
                 h3 {
                     font-size: clamp(1.2rem, 5vw, 1.6rem);
                     text-align: center;
@@ -642,8 +668,8 @@
             <div class="main-content">
             <div class="header-bar">
                 <h1 class="fix-stroke">OUT NOW:</h1>
-                <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Fade, My Dying<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
-                <h2 class="fix-stroke">Flame</h2>
+                <h2 class="fix-stroke">Fade, My Dying</h2>
+                <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
                 <h3>by</h3>
                 <h3>Daniel T. Troiano</h3>
             </div>
