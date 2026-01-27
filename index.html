@@ -417,13 +417,14 @@
                     gap: 8px;
                 }
                 .header-bar {
-                    position: fixed;
+                    position: fixed !important;
                     top: 0;
                     left: 0;
+                    right: 0;
                     width: 100%;
                     background: rgba(0, 0, 0, 0.92);
                     padding: 10px 12px 12px;
-                    z-index: 30;
+                    z-index: 999;
                     text-align: center;
                 }
                 .main-content {
@@ -474,6 +475,7 @@
                 .right-sidebar {
                     width: 60%;
                     align-items: flex-end;
+                    padding-right: 6px;
                 }
                 .left-sidebar img,
                 .right-sidebar img {
@@ -519,10 +521,10 @@
                 }
                 .cover-wrap {
                     position: absolute;
-                    left: 20%;
-                    top: 100%;
+                    left: 32%;
+                    top: 85%;
                     transform: translateX(-50%);
-                    margin-top: 12px;
+                    margin-top: 0;
                     width: auto;
                     max-width: none;
                 }
