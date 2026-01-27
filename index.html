@@ -63,6 +63,9 @@
                 width: 100%;
                 position: relative;
             }
+            .hero-row {
+                width: 100%;
+            }
             h1 {
                 text-align: center;
                 font: 3em cardo;
@@ -406,19 +409,32 @@
                 .main-content {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 8px;
+                }
+                .hero-row {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 12px;
+                    width: 100%;
                 }
                 h1 {
                     font-size: clamp(1.8rem, 7vw, 2.4rem);
                     -webkit-text-stroke: 2px black;
+                    text-align: left;
+                    padding-left: 12px;
                 }
                 h2 {
                     font-size: clamp(1.6rem, 6.5vw, 2.2rem);
                     -webkit-text-stroke: 2px black;
+                    text-align: left;
+                    padding-left: 12px;
                 }
                 h3 {
                     font-size: clamp(1.2rem, 5vw, 1.6rem);
+                    text-align: left;
+                    padding-left: 12px;
                 }
                 .main-content {
                     padding: 20px 16px 80px;
@@ -426,13 +442,18 @@
                 .left-sidebar,
                 .right-sidebar {
                     float: none;
-                    margin: 0 auto;
+                    margin: 0;
                     position: static;
-                    width: 100%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+                .left-sidebar {
+                    width: 40%;
+                }
+                .right-sidebar {
+                    width: 60%;
                 }
                 .left-sidebar img,
                 .right-sidebar img {
@@ -446,6 +467,7 @@
                     width: min(70vw, 320px);
                     height: auto;
                     margin: 0;
+                    align-self: flex-start;
                 }
                 .right-sidebar {
                     flex-direction: column;
@@ -491,7 +513,7 @@
                     max-width: 60vw;
                     height: auto;
                 }
-                .right-column {
+                .right-sidebar img.right-column {
                     display: none;
                 }
                 .bottom-gif {
@@ -596,18 +618,20 @@
             <h2 class="fix-stroke"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
             <h3>by</h3>
             <h3>Daniel T. Troiano</h3>
-            <div class="left-sidebar">
-                <img src="Column.png" alt="Column">
-                <img src="Scroll2.png" alt="scroll" class="scroll">
-                <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
-            </div>
-            <div class="right-sidebar">
-                <img src="NUEVELOGO.png" alt="Nueve Logo" class="main-logo">
-                <div class="cover-wrap">
-                    <img src="FlameGif.gif" alt="Cover hover" class="cover-gif">
-                    <img src="FRONTCOVER.png" alt="cover" class="cover">
+            <div class="hero-row">
+                <div class="left-sidebar">
+                    <img src="Column.png" alt="Column">
+                    <img src="Scroll2.png" alt="scroll" class="scroll">
+                    <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
                 </div>
-                <img src="BrokeColumn.png" alt="BrokeColumn" class="right-column">
+                <div class="right-sidebar">
+                    <img src="NUEVELOGO.png" alt="Nueve Logo" class="main-logo">
+                    <div class="cover-wrap">
+                        <img src="FlameGif.gif" alt="Cover hover" class="cover-gif">
+                        <img src="FRONTCOVER.png" alt="cover" class="cover">
+                    </div>
+                    <img src="BrokeColumn.png" alt="BrokeColumn" class="right-column">
+                </div>
             </div>
             </div>
             <div class="bottom-gif"></div>
