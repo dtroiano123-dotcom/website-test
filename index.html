@@ -297,6 +297,9 @@
             .main-links a:hover {
                 text-decoration: underline;
             }
+            .mobile-actions {
+                display: none;
+            }
             .page {
                 width: 100%;
                 min-height: 100vh;
@@ -562,6 +565,26 @@
                     line-height: 1.6;
                     z-index: 3;
                 }
+                .mobile-actions {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 100%;
+                    margin-top: 12px;
+                    text-align: center;
+                }
+                .mobile-action-panel {
+                    background: rgba(0, 0, 0, 0.75);
+                    border: 2px solid #b5851f;
+                    color: #fff;
+                    padding: 16px 14px;
+                    border-radius: 8px;
+                    font: 1em cardo;
+                }
+                .mobile-action-panel a {
+                    color: #b5851f;
+                    text-decoration: underline;
+                }
                 .cover-wrap {
                     position: absolute;
                     left: 34%;
@@ -575,6 +598,9 @@
                 .cover-gif {
                     width: 60vw;
                     max-width: 60vw;
+                }
+                .cover-gif {
+                    display: none;
                 }
                 .right-column {
                     max-width: 60vw;
@@ -703,6 +729,23 @@
                     <img src="BrokeColumn.png" alt="BrokeColumn" class="right-column">
                 </div>
             </div>
+            <div class="mobile-actions" id="mobile-actions">
+                <div id="purchase-section" class="mobile-action-panel">
+                    <h3>Purchase!</h3>
+                    <p>Right now only the ebook version is available <br> Please grab it at the Amazon link below<br>The paperback version is coming soon!</p>
+                    <a href="https://www.amazon.com/dp/B0GJCQ2FZ4" target="_blank"><img src="Amazon button.png" alt="Purchase" style="max-width: 40%; margin-top: 10px;"></a>
+                </div>
+                <div id="download-section" class="mobile-action-panel">
+                    <h3>Download</h3>
+                    <p>Grab a free pdf preview of my book - <br> It's the first three chapters and includes all illustrations<br> in the regular copy.</p>
+                    <p><a href="FreePreviewFade.pdf" download>Download PDF</a></p>
+                </div>
+                <div id="contact-section" class="mobile-action-panel">
+                    <h3>Contact</h3>
+                    <p>Feel free to drop me a follow on Insta - <a href="https://www.instagram.com/dtroiano12" target="_blank">@dtroiano12</a> <br>Send me a dm for all your other inquiries.</p>
+                    <img src="InstaQR.PNG" alt="Contact" style="max-width: 25%; margin-top: 10px;">
+                </div>
+            </div>
             </div>
             <div class="bottom-gif"></div>
             <img src="FlameGifCROPPED.gif" alt="Right Flame" class="right-flame-patch">
@@ -779,6 +822,20 @@
                 document.getElementById('main-page').classList.remove('hidden');
             }
             function openModal(modalName) {
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    if (modalName === 'purchase') {
+                        document.getElementById('purchase-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        return;
+                    }
+                    if (modalName === 'download') {
+                        document.getElementById('download-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        return;
+                    }
+                    if (modalName === 'contact') {
+                        document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        return;
+                    }
+                }
                 const modalId = modalName + 'Modal';
                 document.getElementById(modalId).classList.add('active');
             }
