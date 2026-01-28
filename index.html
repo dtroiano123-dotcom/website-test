@@ -300,6 +300,10 @@
             .mobile-actions {
                 display: none;
             }
+            .mobile-logo,
+            .mobile-cover {
+                display: none;
+            }
             .page {
                 width: 100%;
                 min-height: 100vh;
@@ -514,16 +518,10 @@
                     justify-content: center;
                 }
                 .left-sidebar {
-                    width: 100%;
+                    width: auto;
                 }
                 .right-sidebar {
-                    width: 100%;
-                    flex-direction: row;
-                    align-items: flex-end;
-                    justify-content: center;
-                    gap: 12px;
-                    padding-right: 0;
-                    margin-left: 0;
+                    display: none;
                 }
                 .left-sidebar img,
                 .right-sidebar img {
@@ -532,13 +530,6 @@
                 }
                 .left-sidebar img:not(.scroll) {
                     max-width: 30vw;
-                }
-                .right-sidebar img.main-logo {
-                    width: min(70vw, 320px);
-                    height: auto;
-                    margin: 0;
-                    align-self: flex-end;
-                    order: 2;
                 }
                 .left-sidebar {
                     position: relative;
@@ -584,13 +575,27 @@
                     color: #b5851f;
                     text-decoration: underline;
                 }
-                .cover-wrap {
-                    position: static;
-                    transform: none;
-                    margin: 0;
-                    width: auto;
-                    max-width: none;
-                    order: 1;
+                .mobile-logo {
+                    display: block;
+                    width: min(28vw, 140px);
+                    height: auto;
+                }
+                .mobile-logo-left {
+                    margin-right: 6px;
+                }
+                .mobile-logo-right {
+                    margin-left: 6px;
+                }
+                .mobile-cover {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 16px;
+                }
+                .mobile-cover-image {
+                    width: 55vw;
+                    max-width: 55vw;
+                    height: auto;
                 }
                 .cover,
                 .cover-gif {
@@ -714,11 +719,13 @@
                 <h3>Daniel T. Troiano</h3>
             </div>
             <div class="hero-row">
+                <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-left">
                 <div class="left-sidebar">
                     <img src="Column.png" alt="Column">
                     <img src="Scroll2.png" alt="scroll" class="scroll">
                     <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
                 </div>
+                <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-right">
                 <div class="right-sidebar">
                     <img src="NUEVELOGO.png" alt="Nueve Logo" class="main-logo">
                     <div class="cover-wrap">
@@ -727,6 +734,9 @@
                     </div>
                     <img src="BrokeColumn.png" alt="BrokeColumn" class="right-column">
                 </div>
+            </div>
+            <div class="mobile-cover">
+                <img src="FRONTCOVER.png" alt="cover" class="mobile-cover-image">
             </div>
             <div class="mobile-actions" id="mobile-actions">
                 <div id="purchase-section" class="mobile-action-panel">
