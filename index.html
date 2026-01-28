@@ -438,12 +438,13 @@
                     width: 100%;
                     background: rgba(0, 0, 0, 0.92);
                     padding: 6px 10px 8px;
-                    z-index: 99999;
+                    z-index: 2147483647;
                     text-align: center;
                     transform: scale(0.75);
                     transform-origin: top center;
                     pointer-events: auto;
                     isolation: isolate;
+                    will-change: transform;
                 }
                 .main-content {
                     padding-top: 0;
@@ -572,9 +573,9 @@
                 .mobile-actions {
                     display: flex;
                     flex-direction: column;
-                    gap: 28px;
+                    gap: 40px;
                     width: 100%;
-                    margin-top: 420px;
+                    margin-top: 300px;
                     text-align: center;
                 }
                 .mobile-action-panel {
@@ -613,8 +614,8 @@
                     display: block;
                     width: 100%;
                     text-align: center;
-                    margin-top: 0;
-                    margin-bottom: 6px;
+                    margin-top: -24px;
+                    margin-bottom: 0;
                     position: relative;
                     z-index: 10;
                 }
