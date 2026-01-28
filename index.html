@@ -581,8 +581,8 @@
                 }
                 .main-links {
                     position: absolute;
-                    top: 50%;
-                    left: 38%;
+                    top: 52%;
+                    left: 36%;
                     transform: translate(-50%, -50%);
                     width: 70%;
                     margin: 0;
@@ -672,12 +672,18 @@
                     margin-bottom: 12px;
                     position: relative;
                 }
-                .mobile-featured-track {
-                    display: inline-flex;
+                .mobile-featured-scroll {
+                    display: flex;
+                    width: max-content;
                     gap: 12px;
                     align-items: center;
                     animation: mobile-conveyor 25s linear infinite;
                     will-change: transform;
+                }
+                .mobile-featured-track {
+                    display: inline-flex;
+                    gap: 12px;
+                    align-items: center;
                 }
                 .mobile-featured-strip img {
                     height: 170px;
@@ -747,6 +753,8 @@
                     transform: none;
                     margin-bottom: 20px;
                     text-align: center;
+                    display: flex;
+                    justify-content: center;
                 }
                 .featured-art-actions button {
                     margin: 0 auto;
@@ -754,13 +762,21 @@
                 }
                 .featured-art-gallery {
                     position: static;
+                    display: flex;
                     flex-wrap: wrap;
                     gap: 16px;
                     margin-top: 0;
                     min-height: auto;
                 }
                 .featured-art-item.item-2 {
-                    order: 99;
+                    order: 99 !important;
+                    flex-basis: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .featured-art-item.item-2 img {
+                    width: 60vw;
+                    max-width: 60vw;
                 }
                 .featured-art-item {
                     position: static;
@@ -859,19 +875,23 @@
                 <img src="FRONTCOVER.png" alt="cover" class="mobile-cover-image">
             </div>
             <div class="mobile-featured-strip" aria-label="Featured art">
-                <div class="mobile-featured-track">
-                    <img src="ninthseertext.png" alt="Featured art 5">
-                    <img src="ch12Frame.png" alt="Featured art 1">
-                    <img src="ch5text.png" alt="Featured art 7">
-                    <img src="epigraphtext.png" alt="Featured art 6">
-                    <img src="ch7Frame.png" alt="Featured art 4">
-                    <img src="ch2Frame.png" alt="Featured art 3">
-                    <img src="ninthseertext.png" alt="Featured art 5 duplicate">
-                    <img src="ch12Frame.png" alt="Featured art 1 duplicate">
-                    <img src="ch5text.png" alt="Featured art 7 duplicate">
-                    <img src="epigraphtext.png" alt="Featured art 6 duplicate">
-                    <img src="ch7Frame.png" alt="Featured art 4 duplicate">
-                    <img src="ch2Frame.png" alt="Featured art 3 duplicate">
+                <div class="mobile-featured-scroll">
+                    <div class="mobile-featured-track">
+                        <img src="ninthseertext.png" alt="Featured art 5">
+                        <img src="ch12Frame.png" alt="Featured art 1">
+                        <img src="ch5text.png" alt="Featured art 7">
+                        <img src="epigraphtext.png" alt="Featured art 6">
+                        <img src="ch7Frame.png" alt="Featured art 4">
+                        <img src="ch2Frame.png" alt="Featured art 3">
+                    </div>
+                    <div class="mobile-featured-track" aria-hidden="true">
+                        <img src="ninthseertext.png" alt="">
+                        <img src="ch12Frame.png" alt="">
+                        <img src="ch5text.png" alt="">
+                        <img src="epigraphtext.png" alt="">
+                        <img src="ch7Frame.png" alt="">
+                        <img src="ch2Frame.png" alt="">
+                    </div>
                 </div>
             </div>
             <div class="mobile-actions" id="mobile-actions">
