@@ -417,6 +417,9 @@
                     --mobile-logo-left: -20px;
                     --mobile-logo-right: -20px;
                 }
+                body {
+                    position: relative;
+                }
                 html, body {
                     overflow-y: auto;
                     -webkit-overflow-scrolling: touch;
@@ -445,6 +448,7 @@
                     pointer-events: auto;
                     isolation: isolate;
                     will-change: transform;
+                    -webkit-transform: translateZ(0) scale(0.75);
                 }
                 .main-content {
                     padding-top: 0;
@@ -575,7 +579,7 @@
                     flex-direction: column;
                     gap: 40px;
                     width: 100%;
-                    margin-top: 300px;
+                    margin-top: 220px;
                     text-align: center;
                 }
                 .mobile-action-panel {
@@ -614,7 +618,7 @@
                     display: block;
                     width: 100%;
                     text-align: center;
-                    margin-top: -24px;
+                    margin-top: -5px;
                     margin-bottom: 0;
                     position: relative;
                     z-index: 10;
