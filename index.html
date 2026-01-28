@@ -144,6 +144,9 @@
                     width: fit-content;
                     margin: 0 auto;
                 }
+                .main-links a.mobile-download {
+                    margin-left: -10px;
+                }
             .bottom-gif {
                 width: 100%;
                 height: 115px;
@@ -675,14 +678,14 @@
                 .mobile-featured-scroll {
                     display: flex;
                     width: max-content;
-                    gap: 12px;
+                    gap: 0;
                     align-items: center;
-                    animation: mobile-conveyor 25s linear infinite;
+                    animation: mobile-conveyor 30s linear infinite;
                     will-change: transform;
                 }
                 .mobile-featured-track {
                     display: inline-flex;
-                    gap: 12px;
+                    gap: 0;
                     align-items: center;
                 }
                 .mobile-featured-strip img {
@@ -691,6 +694,10 @@
                     flex: 0 0 auto;
                     border: none;
                     background: transparent;
+                    margin-right: 12px;
+                }
+                .mobile-featured-track img:last-child {
+                    margin-right: 0;
                 }
                 @keyframes mobile-conveyor {
                     0% { transform: translateX(0); }
@@ -770,13 +777,6 @@
                 }
                 .featured-art-item.item-2 {
                     order: 99 !important;
-                    flex-basis: 100%;
-                    display: flex;
-                    justify-content: center;
-                }
-                .featured-art-item.item-2 img {
-                    width: 60vw;
-                    max-width: 60vw;
                 }
                 .featured-art-item {
                     position: static;
@@ -811,6 +811,9 @@
                     transform: translateX(-50%);
                     width: 150px;
                     line-height: 1;
+                }
+                .main-links a.mobile-download {
+                    margin-left: 0;
                 }
             }
             .featured-art-section::before {
@@ -858,7 +861,7 @@
                     <div class="left-sidebar">
                         <img src="Column.png" alt="Column">
                         <img src="Scroll2.png" alt="scroll" class="scroll">
-                        <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
+                        <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a class="mobile-download" onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
                     </div>
                     <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-right">
                 </div>
@@ -925,12 +928,12 @@
             </div>
             <div class="featured-art-gallery">
                  <div class="featured-art-item item-1"><img src="ch12Frame.png" alt="Featured art 1"></div>
-                 <div class="featured-art-item item-2"><img src="ch1Frame2.jpg" alt="Featured art 2"></div>
                  <div class="featured-art-item item-3"><img src="ch2Frame.png" alt="Featured art 3"></div>
                  <div class="featured-art-item item-4"><img src="ch7Frame.png" alt="Featured art 4"></div>
                  <div class="featured-art-item item-5"><img src="ninthseertext.png" alt="Featured art 5"></div>
                  <div class="featured-art-item item-6"><img src="epigraphtext.png" alt="Featured art 6"></div>
                  <div class="featured-art-item item-7"><img src="ch5text.png" alt="Featured art 7"></div>
+                 <div class="featured-art-item item-2"><img src="ch1Frame2.jpg" alt="Featured art 2"></div>
             </div>
         </section>
         <div id="artModal" class="art-modal" onclick="closeArtModal()">
