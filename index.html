@@ -413,6 +413,10 @@
                 cursor: pointer;
             }
             @media (max-width: 768px) {
+                :root {
+                    --mobile-logo-left: 6px;
+                    --mobile-logo-right: 6px;
+                }
                 html, body {
                     overflow-y: auto;
                     -webkit-overflow-scrolling: touch;
@@ -590,18 +594,18 @@
                     height: auto;
                 }
                 .mobile-logo-left {
-                    margin-right: 6px;
+                    margin-right: 3px;
                     transform: scaleX(-1);
                     position: fixed;
                     top: 400px;
-                    left: 8px;
+                    left: var(--mobile-logo-left) !important;
                     z-index: 25;
                 }
                 .mobile-logo-right {
-                    margin-left: 6px;
+                    margin-left: 3px;
                     position: fixed;
                     top: 400px;
-                    right: 8px;
+                    right: var(--mobile-logo-right) !important;
                     z-index: 25;
                 }
                 .mobile-cover {
