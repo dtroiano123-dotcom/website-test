@@ -443,8 +443,8 @@
                     position: fixed;
                     top: 0;
                     width: 100%;
-                    background: rgba(0, 0, 0, 0.92);
-                    padding: 2px 8px 4px;
+                    background: rgba(20, 20, 20, 0.78);
+                    padding: 1px 6px 2px;
                     z-index: 2147483647;
                     text-align: center;
                     pointer-events: auto;
@@ -480,13 +480,13 @@
                     position: relative;
                 }
                 h1 {
-                    font-size: clamp(1.2rem, 5.2vw, 1.8rem);
+                    font-size: clamp(1.05rem, 4.8vw, 1.6rem);
                     -webkit-text-stroke: 2px black;
                     text-align: center;
                     padding-left: 0;
                 }
                 h2 {
-                    font-size: clamp(1.1rem, 5vw, 1.6rem);
+                    font-size: clamp(1rem, 4.6vw, 1.45rem);
                     -webkit-text-stroke: 2px black;
                     text-align: center;
                     padding-left: 0;
@@ -525,9 +525,12 @@
                     background-image: url("SingleFlameGIFRIGHT.gif");
                 }
                 h3 {
-                    font-size: clamp(0.9rem, 4vw, 1.2rem);
+                    font-size: clamp(0.85rem, 3.8vw, 1.1rem);
                     text-align: center;
                     padding-left: 0;
+                }
+                .header-bar h2 + h3 {
+                    margin-top: 0;
                 }
                 .main-content {
                     padding: 140px 16px 80px;
@@ -653,22 +656,29 @@
                 }
                 .mobile-featured-strip {
                     display: flex;
+                    overflow: hidden;
+                    padding: 8px 0 12px;
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                    position: relative;
+                }
+                .mobile-featured-track {
+                    display: inline-flex;
                     gap: 12px;
-                    overflow-x: auto;
-                    overflow-y: hidden;
-                    padding: 8px 16px 12px;
-                    margin-top: -20px;
-                    margin-bottom: 8px;
-                    scroll-snap-type: x mandatory;
-                    -webkit-overflow-scrolling: touch;
+                    align-items: center;
+                    animation: mobile-conveyor 25s linear infinite;
+                    will-change: transform;
                 }
                 .mobile-featured-strip img {
-                    height: 120px;
+                    height: 170px;
                     width: auto;
                     flex: 0 0 auto;
-                    scroll-snap-align: start;
-                    border: 1px solid rgba(181, 133, 31, 0.6);
-                    background: rgba(0, 0, 0, 0.4);
+                    border: none;
+                    background: transparent;
+                }
+                @keyframes mobile-conveyor {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
                 }
                 .mobile-cover-image {
                     width: 65vw;
@@ -822,12 +832,20 @@
                 <img src="FRONTCOVER.png" alt="cover" class="mobile-cover-image">
             </div>
             <div class="mobile-featured-strip" aria-label="Featured art">
-                <img src="ch12Frame.png" alt="Featured art 1">
-                <img src="ch2Frame.png" alt="Featured art 3">
-                <img src="ch7Frame.png" alt="Featured art 4">
-                <img src="ninthseertext.png" alt="Featured art 5">
-                <img src="epigraphtext.png" alt="Featured art 6">
-                <img src="ch5text.png" alt="Featured art 7">
+                <div class="mobile-featured-track">
+                    <img src="ninthseertext.png" alt="Featured art 5">
+                    <img src="ch12Frame.png" alt="Featured art 1">
+                    <img src="ch5text.png" alt="Featured art 7">
+                    <img src="epigraphtext.png" alt="Featured art 6">
+                    <img src="ch7Frame.png" alt="Featured art 4">
+                    <img src="ch2Frame.png" alt="Featured art 3">
+                    <img src="ninthseertext.png" alt="Featured art 5 duplicate">
+                    <img src="ch12Frame.png" alt="Featured art 1 duplicate">
+                    <img src="ch5text.png" alt="Featured art 7 duplicate">
+                    <img src="epigraphtext.png" alt="Featured art 6 duplicate">
+                    <img src="ch7Frame.png" alt="Featured art 4 duplicate">
+                    <img src="ch2Frame.png" alt="Featured art 3 duplicate">
+                </div>
             </div>
             <div class="mobile-actions" id="mobile-actions">
                 <div id="purchase-section" class="mobile-action-panel">
