@@ -454,6 +454,13 @@
                     padding-bottom: 240px;
                     margin-right: 0;
                 }
+                .column-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 100%;
+                }
                 h1 {
                     font-size: clamp(1.8rem, 7vw, 2.4rem);
                     -webkit-text-stroke: 2px black;
@@ -593,8 +600,8 @@
                     margin-top: 16px;
                 }
                 .mobile-cover-image {
-                    width: 55vw;
-                    max-width: 55vw;
+                    width: 65vw;
+                    max-width: 65vw;
                     height: auto;
                 }
                 .cover,
@@ -719,13 +726,15 @@
                 <h3>Daniel T. Troiano</h3>
             </div>
             <div class="hero-row">
-                <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-left">
-                <div class="left-sidebar">
-                    <img src="Column.png" alt="Column">
-                    <img src="Scroll2.png" alt="scroll" class="scroll">
-                    <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
+                <div class="column-row">
+                    <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-left">
+                    <div class="left-sidebar">
+                        <img src="Column.png" alt="Column">
+                        <img src="Scroll2.png" alt="scroll" class="scroll">
+                        <p class="main-links"><a onclick="openModal('purchase')">PURCHASE</a> <br><a onclick="openModal('download')">DOWNLOAD</a> <br><a onclick="showFeaturedArt()">FEATURED ART</a> <br><a onclick="openModal('contact')">CONTACT</a></p>
+                    </div>
+                    <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-right">
                 </div>
-                <img src="NUEVELOGO.png" alt="Nueve Logo" class="mobile-logo mobile-logo-right">
                 <div class="right-sidebar">
                     <img src="NUEVELOGO.png" alt="Nueve Logo" class="main-logo">
                     <div class="cover-wrap">
