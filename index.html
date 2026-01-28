@@ -441,13 +441,14 @@
                 }
                 .hero-row {
                     display: flex;
-                    align-items: flex-end;
-                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
                     gap: 12px;
                     width: 100%;
                     position: relative;
                     padding-bottom: 240px;
-                    margin-right: -16px;
+                    margin-right: 0;
                 }
                 h1 {
                     font-size: clamp(1.8rem, 7vw, 2.4rem);
@@ -509,17 +510,20 @@
                     position: static;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
+                    align-items: center;
+                    justify-content: center;
                 }
                 .left-sidebar {
-                    width: 40%;
+                    width: 100%;
                 }
                 .right-sidebar {
-                    width: 60%;
+                    width: 100%;
+                    flex-direction: row;
                     align-items: flex-end;
+                    justify-content: center;
+                    gap: 12px;
                     padding-right: 0;
-                    margin-left: auto;
+                    margin-left: 0;
                 }
                 .left-sidebar img,
                 .right-sidebar img {
@@ -534,12 +538,7 @@
                     height: auto;
                     margin: 0;
                     align-self: flex-end;
-                    position: relative;
-                    right: -16px;
-                }
-                .right-sidebar {
-                    flex-direction: column;
-                    gap: 16px;
+                    order: 2;
                 }
                 .left-sidebar {
                     position: relative;
@@ -586,18 +585,17 @@
                     text-decoration: underline;
                 }
                 .cover-wrap {
-                    position: absolute;
-                    left: 34%;
-                    top: 72%;
-                    transform: translateX(-50%);
-                    margin-top: 0;
+                    position: static;
+                    transform: none;
+                    margin: 0;
                     width: auto;
                     max-width: none;
+                    order: 1;
                 }
                 .cover,
                 .cover-gif {
-                    width: 40.5vw !important;
-                    max-width: 40.5vw !important;
+                    width: 44.5vw !important;
+                    max-width: 44.5vw !important;
                     height: auto !important;
                 }
                 .cover-gif {
