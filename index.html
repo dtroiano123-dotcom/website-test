@@ -66,6 +66,9 @@
             .header-bar {
                 width: 100%;
             }
+            .header-wrap {
+                width: 100%;
+            }
             .mobile-title {
                 display: none;
             }
@@ -434,10 +437,8 @@
                     gap: 8px;
                 }
                 .header-bar {
-                    position: fixed !important;
+                    position: sticky;
                     top: 0;
-                    left: 0;
-                    right: 0;
                     width: 100%;
                     background: rgba(0, 0, 0, 0.92);
                     padding: 6px 10px 8px;
@@ -446,6 +447,12 @@
                     pointer-events: auto;
                     isolation: isolate;
                     -webkit-transform: translateZ(0);
+                }
+                .header-wrap {
+                    position: sticky;
+                    top: 0;
+                    z-index: 2147483647;
+                    background: rgba(0, 0, 0, 0.92);
                 }
                 .main-content {
                     padding-top: 0;
@@ -738,13 +745,15 @@
     <body>
         <div id="main-page" class="page">
             <div class="main-content">
-            <div class="header-bar">
-                <h1 class="fix-stroke">OUT NOW:</h1>
-                <h2 class="fix-stroke title-line">Fade, My Dying</h2>
-                <h2 class="fix-stroke flame-line"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
-                <h2 class="fix-stroke mobile-title">Fade, My Dying Flame</h2>
-                <h3>by</h3>
-                <h3>Daniel T. Troiano</h3>
+            <div class="header-wrap">
+                <div class="header-bar">
+                    <h1 class="fix-stroke">OUT NOW:</h1>
+                    <h2 class="fix-stroke title-line">Fade, My Dying</h2>
+                    <h2 class="fix-stroke flame-line"><img src="SingleFlameGIFLEFT.gif" alt="FlameL">Flame<img src="SingleFlameGIFRIGHT.gif" alt="FlameR"></h2>
+                    <h2 class="fix-stroke mobile-title">Fade, My Dying Flame</h2>
+                    <h3>by</h3>
+                    <h3>Daniel T. Troiano</h3>
+                </div>
             </div>
             <div class="hero-row">
                 <div class="column-row">
