@@ -783,6 +783,9 @@
                     min-height: auto;
                     width: 100%;
                 }
+                #featured-art .featured-art-gallery {
+                    display: grid !important;
+                }
                 .featured-art-item {
                     display: flex;
                     justify-content: center;
@@ -790,6 +793,7 @@
                 }
                 .featured-art-item.item-1 { order: 1; }
                 .featured-art-item.item-2 { display: none; }
+                #featured-art .featured-art-item.item-2 { display: none !important; }
                 .featured-art-item.item-3 { order: 2; }
                 .featured-art-item.item-4 { order: 3; }
                 .featured-art-item.item-5 { order: 4; }
@@ -1036,5 +1040,11 @@
             document.querySelectorAll('.featured-art-gallery img').forEach((img) => {
                 img.addEventListener('click', () => openArtModal(img.src, img.alt));
             });
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                const item2 = document.querySelector('#featured-art .featured-art-item.item-2');
+                if (item2) {
+                    item2.remove();
+                }
+            }
         </script>
 </html>
