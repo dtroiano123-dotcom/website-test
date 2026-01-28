@@ -755,23 +755,19 @@
                 .featured-art-section {
                     padding: 80px 0 40px;
                 }
-                .featured-art-actions {
-                    position: static;
-                    transform: none;
-                    margin-bottom: 20px;
-                    text-align: center;
+                .featured-art-return {
                     display: flex;
                     justify-content: center;
-                    align-items: center;
                     width: 100%;
-                    margin-top: 24px;
-                    outline: 2px dashed rgba(255, 0, 0, 0.6);
+                    margin: 24px 0 20px;
                 }
-                .featured-art-actions button {
-                    margin: 0 auto;
-                    display: block;
-                    width: fit-content;
-                    outline: 2px dashed rgba(0, 128, 255, 0.7);
+                .featured-art-return .return-btn {
+                    font: 1.2em cardo;
+                    padding: 10px 22px;
+                    border: 2px solid #b5851f;
+                    background: rgba(0, 0, 0, 0.6);
+                    color: #b5851f;
+                    cursor: pointer;
                 }
                 .featured-art-gallery {
                     position: static;
@@ -951,8 +947,8 @@
             <div class="bottom-text-box">Everything created by Daniel Troiano © 2026 Daniel Troiano. All Rights Reserved.</div>
         </div>
         <section id="featured-art" class="featured-art-section page hidden">
-            <div class="featured-art-actions">
-                <button type="button" onclick="showMainPage()">Return</button>
+            <div class="featured-art-return">
+                <button type="button" class="return-btn" onclick="showMainPage()">Return</button>
             </div>
             <div class="featured-art-gallery">
                  <div class="featured-art-item item-1"><img src="ch12Frame.png" alt="Featured art 1"></div>
