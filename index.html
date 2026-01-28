@@ -419,6 +419,9 @@
                 cursor: pointer;
             }
             @media (max-width: 768px) {
+                body.featured-art-open .header-wrap {
+                    display: none;
+                }
                 :root {
                     --mobile-logo-left: -20px;
                     --mobile-logo-right: -20px;
@@ -530,7 +533,7 @@
                     padding-left: 0;
                 }
                 .header-bar h2 + h3 {
-                    margin-top: 0;
+                    margin-top: -0.35em;
                 }
                 .main-content {
                     padding: 140px 16px 80px;
@@ -658,7 +661,7 @@
                     display: flex;
                     overflow: hidden;
                     padding: 8px 0 12px;
-                    margin-top: 20px;
+                    margin-top: 60px;
                     margin-bottom: 12px;
                     position: relative;
                 }
@@ -937,10 +940,12 @@
             function showFeaturedArt() {
                 document.getElementById('main-page').classList.add('hidden');
                 document.getElementById('featured-art').classList.remove('hidden');
+                document.body.classList.add('featured-art-open');
             }
             function showMainPage() {
                 document.getElementById('featured-art').classList.add('hidden');
                 document.getElementById('main-page').classList.remove('hidden');
+                document.body.classList.remove('featured-art-open');
             }
             function openModal(modalName) {
                 if (window.matchMedia('(max-width: 768px)').matches) {
