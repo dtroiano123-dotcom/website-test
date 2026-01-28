@@ -598,6 +598,27 @@
                     color: #b5851f;
                     text-decoration: underline;
                 }
+                .contact-wrap {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+                .mobile-broke-column {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60vw;
+                    max-width: 60vw;
+                    height: auto;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+                .contact-wrap .mobile-action-panel {
+                    position: relative;
+                    z-index: 1;
+                }
                 .mobile-logo {
                     display: block;
                     width: min(34vw, 170px);
@@ -789,10 +810,13 @@
                     <p>Grab a free pdf preview of my book - <br> It's the first three chapters and includes all illustrations<br> in the regular copy.</p>
                     <p><a href="FreePreviewFade.pdf" download>Download PDF</a></p>
                 </div>
-                <div id="contact-section" class="mobile-action-panel">
-                    <h3>Contact</h3>
-                    <p>Feel free to drop me a follow on Insta - <a href="https://www.instagram.com/dtroiano12" target="_blank">@dtroiano12</a> <br>Send me a dm for all your other inquiries.</p>
-                    <img src="InstaQR.PNG" alt="Contact" style="max-width: 25%; margin-top: 10px;">
+                <div class="contact-wrap">
+                    <div id="contact-section" class="mobile-action-panel">
+                        <h3>Contact</h3>
+                        <p>Feel free to drop me a follow on Insta - <a href="https://www.instagram.com/dtroiano12" target="_blank">@dtroiano12</a> <br>Send me a dm for all your other inquiries.</p>
+                        <img src="InstaQR.PNG" alt="Contact" style="max-width: 25%; margin-top: 10px;">
+                    </div>
+                    <img src="BrokeColumn.png" alt="BrokeColumn" class="mobile-broke-column">
                 </div>
             </div>
             </div>
