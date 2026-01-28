@@ -753,7 +753,7 @@
                     z-index: 5;
                 }
                 .featured-art-section {
-                    padding: 80px 16px 40px;
+                    padding: 80px 0 40px;
                 }
                 .featured-art-actions {
                     position: static;
@@ -783,9 +783,12 @@
                     min-height: auto;
                     width: 100%;
                     max-width: 100%;
-                    padding: 0 16px;
+                    padding: 0;
                     box-sizing: border-box;
                     justify-content: center;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
                 #featured-art .featured-art-gallery {
                     display: grid !important;
