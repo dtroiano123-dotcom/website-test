@@ -437,7 +437,7 @@
                     gap: 8px;
                 }
                 .header-bar {
-                    position: sticky;
+                    position: fixed;
                     top: 0;
                     width: 100%;
                     background: rgba(0, 0, 0, 0.92);
@@ -449,10 +449,7 @@
                     -webkit-transform: translateZ(0);
                 }
                 .header-wrap {
-                    position: sticky;
-                    top: 0;
-                    z-index: 2147483647;
-                    background: rgba(0, 0, 0, 0.92);
+                    position: static;
                 }
                 .main-content {
                     padding-top: 0;
@@ -622,7 +619,7 @@
                     display: block;
                     width: 100%;
                     text-align: center;
-                    margin-top: -40px;
+                    margin-top: -120px;
                     margin-bottom: 0;
                     position: relative;
                     z-index: 10;
@@ -631,6 +628,7 @@
                     width: 65vw;
                     max-width: 65vw;
                     height: auto;
+                    transform: translateY(-60px);
                 }
                 .cover,
                 .cover-gif {
