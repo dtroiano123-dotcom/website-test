@@ -449,7 +449,10 @@
                     -webkit-transform: translateZ(0);
                 }
                 .header-wrap {
-                    position: static;
+                    position: fixed;
+                    inset: 0;
+                    z-index: 2147483647;
+                    pointer-events: none;
                 }
                 .main-content {
                     padding-top: 0;
