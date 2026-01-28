@@ -312,8 +312,8 @@
             }
             .mobile-logo,
             .mobile-cover {
-                display: none;
-            }
+                    display: block;
+                    width: 100%;
             .mobile-featured-strip {
                 display: none;
             }
@@ -323,7 +323,7 @@
             }
             .page.hidden {
                 display: none;
-            }
+                    grid-template-columns: 1fr;
             .featured-art-section {
                 min-height: 100vh;
                 padding: 140px 40px 160px;
@@ -341,6 +341,10 @@
                 display: flex;
                 justify-content: center;
                 transform: translateX(-12px);
+                .featured-art-item img {
+                    width: 80vw;
+                    max-width: 80vw;
+                }
             }
             .featured-art-actions button {
                 font: 1.4em cardo;
